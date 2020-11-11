@@ -9,7 +9,6 @@ Public Class Form1
     Dim data As MySqlDataAdapter = New MySqlDataAdapter()
     Dim cmd As MySqlCommand
 
-    ''create Button
     Private Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_save.Click
         Create()
     End Sub
@@ -80,7 +79,7 @@ Public Class Form1
                 conexion.Open()
                 ''MessageBox.Show("Conectado al servidor")
             Catch ex As Exception
-                MessageBox.Show("Error de conexion")
+                MsgBox("Error de conexion", MsgBoxStyle.Critical, "Error")
                 Console.WriteLine(ex)
             End Try
 
@@ -137,10 +136,10 @@ Public Class Form1
                 MsgBox("Paciente Agregado...", MsgBoxStyle.Information, "Correcto")
             Catch ex As MySql.Data.MySqlClient.MySqlException
                 Console.WriteLine(ex)
-                MessageBox.Show("Error")
+                MsgBox("Error", MsgBoxStyle.Critical, "Error")
             End Try
         Else
-            MessageBox.Show("Llena los datos correctamente ")
+            MsgBox("Falta informacion....", MsgBoxStyle.Information, "Info")
         End If
 
     End Sub
@@ -200,12 +199,13 @@ Public Class Form1
                 ''Actualizar la tabla de registros
                 GetAllData()
                 MsgBox("Datos actualizados...", MsgBoxStyle.OkOnly, "Correcto")
+
             Catch ex As MySql.Data.MySqlClient.MySqlException
                 Console.WriteLine(ex)
-                MessageBox.Show("Error")
+                MsgBox("Error", MsgBoxStyle.Critical, "Error")
             End Try
         Else
-            MessageBox.Show("Llena los datos correctamente ")
+            MsgBox("Falta informacion....", MsgBoxStyle.Information, "Info")
         End If
 
 
@@ -221,7 +221,7 @@ Public Class Form1
                 conexion.Open()
                 ''MessageBox.Show("Conectado al servidor")
             Catch ex As Exception
-                MessageBox.Show("Error de conexion")
+                MsgBox("Error de conexion", MsgBoxStyle.Critical, "Error")
                 Console.WriteLine(ex)
             End Try
 
@@ -244,7 +244,7 @@ Public Class Form1
                 conexion.Close()
             Catch ex As MySql.Data.MySqlClient.MySqlException
                 Console.WriteLine(ex)
-                MessageBox.Show("Error")
+                MsgBox("Error", MsgBoxStyle.Critical, "Error")
             End Try
         End If
     End Sub
@@ -261,7 +261,7 @@ Public Class Form1
             conexion.Open()
             ''MessageBox.Show("Conectado al servidor")
         Catch ex As Exception
-            MessageBox.Show("Error de conexion")
+            MsgBox("Error de conexion", MsgBoxStyle.Critical, "Error")
             Console.WriteLine(ex)
         End Try
 
@@ -281,7 +281,7 @@ Public Class Form1
             conexion.Close()
         Catch ex As MySql.Data.MySqlClient.MySqlException
             Console.WriteLine(ex)
-            MessageBox.Show("Error")
+            MsgBox("Error", MsgBoxStyle.Critical, "Error")
         End Try
 
     End Sub
@@ -317,7 +317,7 @@ Public Class Form1
                 conexion.Open()
                 ''MessageBox.Show("Conectado al servidor")
             Catch ex As Exception
-                MessageBox.Show("Error de conexion")
+                MsgBox("Error de conexion", MsgBoxStyle.Critical, "Error")
                 Console.WriteLine(ex)
             End Try
 
@@ -351,7 +351,7 @@ Public Class Form1
                 conexion.Close()
             Catch ex As MySql.Data.MySqlClient.MySqlException
                 Console.WriteLine(ex)
-                MessageBox.Show("Error")
+                MsgBox("Error", MsgBoxStyle.Critical, "Error")
             End Try
 
         End If
