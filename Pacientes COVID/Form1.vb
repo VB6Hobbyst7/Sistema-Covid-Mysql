@@ -199,7 +199,6 @@ Public Class Form1
                 ''Actualizar la tabla de registros
                 GetAllData()
                 MsgBox("Datos actualizados...", MsgBoxStyle.OkOnly, "Correcto")
-
             Catch ex As MySql.Data.MySqlClient.MySqlException
                 Console.WriteLine(ex)
                 MsgBox("Error", MsgBoxStyle.Critical, "Error")
