@@ -1,4 +1,4 @@
-# Sistema-Covid-Mysql
+# Sistema Covid
 
 Este sistema es creado con fines educativos para probar la conexion de vb.net con mysql
 
